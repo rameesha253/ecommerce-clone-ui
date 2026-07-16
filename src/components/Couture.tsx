@@ -25,7 +25,7 @@ const Couture: React.FC = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative overflow-hidden rounded-lg">
               <img
-                src="/src/assets/couture/couture.webp"
+                src="/couture/couture.webp"
                 alt="Couture Collection"
                 className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover"
               />
