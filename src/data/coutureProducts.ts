@@ -1,5 +1,5 @@
 // Define the type for CoutureProduct
-interface CoutureProduct {
+export interface CoutureProduct {
   id: string;
   title: string;
   price: string;
