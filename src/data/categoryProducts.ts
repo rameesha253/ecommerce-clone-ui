@@ -51,11 +51,11 @@ export const categoryProducts: Record<string, CategoryProduct[]> = {
     { id: 5, title: 'Organza Embroidered Piece', price: 'Rs.17,990', image: '/src/assets/products/lux5.jpg', tag: 'Fabric' },
   ],
   'Accessories': [
-    { id: 1, title: 'Embroidered Clutch', price: 'Rs.8,990', image: '/src/assets/category-products/accessories-1.jpg', tag: 'Accessory' },
-    { id: 2, title: 'Beaded Necklace Set', price: 'Rs.12,990', image: '/src/assets/category-products/accessories-2.jpg', tag: 'Accessory' },
-    { id: 3, title: 'Printed Silk Scarf', price: 'Rs.5,990', image: '/src/assets/category-products/accessories-3.jpg', tag: 'Accessory' },
-    { id: 4, title: 'Designer Bangles', price: 'Rs.9,990', image: '/src/assets/category-products/accessories-4.jpg', tag: 'Accessory' },
-    { id: 5, title: 'Stone-Studded Earrings', price: 'Rs.7,990', image: '/src/assets/category-products/accessories-5.jpg', tag: 'Accessory' },
+    { id: 1, title: 'Embroidered Clutch', price: 'Rs.8,990', image: '/src/assets/products/a1.webp', tag: 'Accessory' },
+    { id: 2, title: 'Beaded Necklace Set', price: 'Rs.12,990', image: '/src/assets/products/a2.webp', tag: 'Accessory' },
+    { id: 3, title: 'Printed Silk Scarf', price: 'Rs.5,990', image: '/src/assets/products/a3.jpg', tag: 'Accessory' },
+    { id: 4, title: 'Designer Bangles', price: 'Rs.9,990', image: '/src/assets/products/a4.webp', tag: 'Accessory' },
+    { id: 5, title: 'Stone-Studded Earrings', price: 'Rs.7,990', image: '/src/assets/products/a5.webp', tag: 'Accessory' },
   ],
 };
 
