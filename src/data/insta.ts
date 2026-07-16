@@ -1,4 +1,4 @@
-interface InstaPost {
+export interface InstaPost {
   id: string;
   username: string;
   category: string;

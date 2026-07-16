@@ -44,7 +44,7 @@ const Collections: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left Section: Text and Animations */}
           <div className="w-full lg:w-1/3 space-y-6">
-            <div className="flex items-center md:text-center gap-2 text-sm text-gray-500 uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-sm text-gray-500 uppercase tracking-wider">
               <div className="h-px w-6 bg-gray-300" />
               <div>{"New Arrivals"}</div>
               <div className="h-px w-6 bg-gray-300" />

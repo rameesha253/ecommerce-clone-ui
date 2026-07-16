@@ -56,7 +56,6 @@ const Insta: React.FC = () => {
           {instaPosts.map((post: InstaPost) => (
             <SwiperSlide key={post.id} className="pb-4">
               <div className="group relative bg-white rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
-                {/* Post Header */}
                 <div className="flex items-center gap-2 p-3">
                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                     <img
@@ -80,7 +79,6 @@ const Insta: React.FC = () => {
                   />
                 </div>
 
-                {/* Post Footer */}
                 <div className="p-3 flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <button className="text-gray-600 hover:text-red-500 transition-colors">
@@ -105,7 +103,6 @@ const Insta: React.FC = () => {
           ))}
         </Swiper>
 
-        {/* Navigation Buttons (Below the Slider) */}
         <div className="flex gap-2 mt-4 justify-start">
           <button
             ref={prevRef}

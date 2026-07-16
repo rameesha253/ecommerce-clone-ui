@@ -27,27 +27,7 @@ export interface Category {
 
 export interface Collection {
   id: number;
-  title: string;
   image: string;
-  description: string;
-  link: string;
-  tag: string;
-}
-
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  originalPrice?: number;
-  image: string;
-  category: string;
-  badge?: 'New' | 'Sale' | 'Best Seller';
-  rating: number;
-  reviews: number;
-}
-
-export interface ProductCardProps {
-  product: Product;
 }
 
 export interface NewsletterFormData {

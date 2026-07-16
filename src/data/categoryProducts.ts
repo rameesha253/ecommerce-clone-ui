@@ -41,7 +41,7 @@ export const categoryProducts: Record<string, CategoryProduct[]> = {
     { id: 2, title: '3 Piece Chiffon Printed', price: 'Rs.22,990', image: '/src/assets/products/uns2.jpg', tag: 'Unstitched' },
     { id: 3, title: '3 Piece Silk Embroidered', price: 'Rs.28,990', image: '/src/assets/products/uns3.jpg', tag: 'Unstitched' },
     { id: 4, title: '3 Piece Cotton Jute', price: 'Rs.17,990', image: '/src/assets/products/uns4.jpg', tag: 'Unstitched' },
-    { id: 5, title: '3 Piece Organza Suit', price: 'Rs.26,990', image: '/src/assets/products/uns6.jpg', tag: 'Unstitched' },
+    { id: 5, title: '3 Piece Organza Suit', price: 'Rs.26,990', image: '/src/assets/products/uns5.jpg', tag: 'Unstitched' },
   ],
   'M.Luxe Fabrics': [
     { id: 1, title: 'Pure Chiffon Dupatta', price: 'Rs.11,990', image: '/src/assets/products/lux1.jpg', tag: 'Fabric' },
