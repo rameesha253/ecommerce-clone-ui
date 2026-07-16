@@ -1,6 +1,5 @@
 import React from "react";
 //import { FiArrowRight } from 'react-icons/fi';
-import UnsImage from "../../assets/new/uns.web";
 
 const Categories: React.FC = () => {
   return (
@@ -17,14 +16,14 @@ const Categories: React.FC = () => {
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex gap-6 w-max px-4 scrollbar-hide">
             {[
-              { title: "Unstitched", image: UnsImage },
+              { title: "Unstitched", image:"/new/uns.webp"  },
               {
-                title: "Luxury Formals",image: "/src/assets/new/luxformals.webp",
+                title: "Luxury Formals",image: "/new/luxformals.webp",
               },
-              { title: "Luxury Pret", image: "/src/assets/new/pret.webp" },
-              { title: "Stitched", image: "/src/assets/new/stitched.webp" },
-              { title: "Perfumes", image: "/src/assets/new/perfume.webp" },
-              { title: "M Luxe Fabrics", image: "/src/assets/new/mlux.webp" },
+              { title: "Luxury Pret", image: "/new/pret.webp" },
+              { title: "Stitched", image: "/new/stitched.webp" },
+              { title: "Perfumes", image: "/new/perfume.webp" },
+              { title: "M Luxe Fabrics", image: "/new/mlux.webp" },
             ].map((item, index) => (
               <div
                 key={index}
