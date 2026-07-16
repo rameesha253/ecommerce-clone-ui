@@ -17,7 +17,7 @@ const Categories: React.FC = () => {
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex gap-6 w-max px-4 scrollbar-hide">
             {[
-              { title: "Unstitched", image: UnsImage" },
+              { title: "Unstitched", image: UnsImage },
               {
                 title: "Luxury Formals",image: "/src/assets/new/luxformals.webp",
               },
