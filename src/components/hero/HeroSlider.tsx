@@ -7,12 +7,12 @@ import 'swiper/css/pagination';
 
 const HeroSlider: React.FC = () => {
   const slides = [
-    { id: 1, image: '/assets/hero/kids.webp' },
-    { id: 2, image: '/assets/hero/Lawn.webp' },
-    { id: 3, image: '/assets/hero/Couture.webp' },
-    { id: 4, image: '/assets/hero/best_seller.webp' },
-    { id: 5, image: '/assets/hero/DW_Summer.webp' },
-    { id: 6, image: '/assets/hero/Mastani.webp' },
+    { id: 1, image: '/hero/kids.webp' },
+    { id: 2, image: '/hero/Lawn.webp' },
+    { id: 3, image: '/hero/Couture.webp' },
+    { id: 4, image: '/hero/best_seller.webp' },
+    { id: 5, image: '/hero/DW_Summer.webp' },
+    { id: 6, image: '/hero/Mastani.webp' },
   ];
 
   return (

@@ -16,14 +16,14 @@ const Categories: React.FC = () => {
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex gap-6 w-max px-4 scrollbar-hide">
             {[
-              { title: "Unstitched", image: "/src/assets/new/uns.webp" },
+              { title: "Unstitched", image: "/new/uns.webp" },
               {
-                title: "Luxury Formals",image: "/src/assets/new/luxformals.webp",
+                title: "Luxury Formals",image: "/new/luxformals.webp",
               },
-              { title: "Luxury Pret", image: "/src/assets/new/pret.webp" },
-              { title: "Stitched", image: "/src/assets/new/stitched.webp" },
-              { title: "Perfumes", image: "/src/assets/new/perfume.webp" },
-              { title: "M Luxe Fabrics", image: "/src/assets/new/mlux.webp" },
+              { title: "Luxury Pret", image: "/new/pret.webp" },
+              { title: "Stitched", image: "/new/stitched.webp" },
+              { title: "Perfumes", image: "/new/perfume.webp" },
+              { title: "M Luxe Fabrics", image: "/new/mlux.webp" },
             ].map((item, index) => (
               <div
                 key={index}
@@ -51,11 +51,11 @@ const Categories: React.FC = () => {
           {[
             {
               title: "Ready To Wear",
-              image: "/src/assets/categories/rtw.webp",
+              image: "/categories/rtw.webp",
             },
             {
               title: "Unstitched",
-              image: "/src/assets/categories/Unstitched.webp",
+              image: "/categories/Unstitched.webp",
             },
           ].map((item, index) => (
             <div
@@ -79,9 +79,9 @@ const Categories: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { title: "Couture", image: "/src/assets/categories/couture.webp" },
-            { title: "Jewelry", image: "/src/assets/categories/Jewelry.webp" },
-            { title: "Accessories", image: "/src/assets/categories/accessory.webp",},
+            { title: "Couture", image: "/categories/couture.webp" },
+            { title: "Jewelry", image: "/categories/Jewelry.webp" },
+            { title: "Accessories", image: "/categories/accessory.webp",},
           ].map((item, index) => (
             <div
               key={index}
