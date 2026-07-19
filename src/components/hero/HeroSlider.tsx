@@ -16,7 +16,7 @@ const HeroSlider: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full h-[430px] md:h-[430px] lg:h-[500] overflow-hidden">
+    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
@@ -36,24 +36,6 @@ const HeroSlider: React.FC = () => {
                 backgroundImage: `url(${slide.image})`,
               }}
             >
-              {/* Overlay gradient for elegance */}
-              <div className="absolute inset-0 bg-black/40" />
-
-              {/* Centered content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-                <h2 className="text-3xl md:text-5xl font-playfair font-bold mb-4 tracking-wide">
-                  READY TO WEAR
-                </h2>
-                <p className="text-2xl md:text-4xl italic font-light mb-8">
-                  Best Sellers
-                </p>
-                <a
-                  href="#"
-                  className="px-10 py-4 bg-white text-black uppercase tracking-widest text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
-                >
-                  Explore Collection
-                </a>
-              </div>
             </div>
           </SwiperSlide>
         ))}
