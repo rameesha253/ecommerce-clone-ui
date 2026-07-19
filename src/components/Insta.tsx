@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import {
@@ -17,6 +18,7 @@ import type { InstaPost } from "../data/insta";
 const Insta: React.FC = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-white">
@@ -44,11 +46,16 @@ const Insta: React.FC = () => {
             1280: { slidesPerView: 5, spaceBetween: 24 },
           }}
           className="pb-4"
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           onBeforeInit={(swiper) => {
             if (swiper.params.navigation) {
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
             }
+          }}
+          onInit={(swiper) => {
             swiper.navigation.init();
             swiper.navigation.update();
           }}
