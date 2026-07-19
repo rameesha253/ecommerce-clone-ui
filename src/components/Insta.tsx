@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -19,6 +19,24 @@ const Insta: React.FC = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
   const swiperRef = useRef<SwiperType | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Initialize Swiper navigation after the component mounts
+  useEffect(() => {
+    setIsMounted(true);
+    if (swiperRef.current) {
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+    }
+  }, []);
+
+  // Reinitialize Swiper navigation when the component updates
+  useEffect(() => {
+    if (isMounted && swiperRef.current) {
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+    }
+  }, [isMounted]);
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-white">
@@ -48,16 +66,6 @@ const Insta: React.FC = () => {
           className="pb-4"
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
-          }}
-          onBeforeInit={(swiper) => {
-            if (swiper.params.navigation) {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }
-          }}
-          onInit={(swiper) => {
-            swiper.navigation.init();
-            swiper.navigation.update();
           }}
         >
           {instaPosts.map((post: InstaPost) => (
@@ -110,6 +118,7 @@ const Insta: React.FC = () => {
           ))}
         </Swiper>
 
+        {/* Navigation Buttons */}
         <div className="flex gap-2 mt-4 justify-start">
           <button
             ref={prevRef}
