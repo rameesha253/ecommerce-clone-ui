@@ -107,7 +107,7 @@ const SideNavbar: React.FC<SideNavbarProps> = ({ isOpen, onClose }) => {
                         className={`text-md tracking-wider uppercase transition-colors ${
                           item.isRed
                             ? "text-red-600 font-normal hover:text-red-700"
-                            : "text-gray-800 hover:text-black"
+                            : "text-gray-900 hover:text-black"
                         }`}
                       >
                         {item.title}
