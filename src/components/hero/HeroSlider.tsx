@@ -44,25 +44,25 @@ const HeroSlider: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-20 md:bottom-24 right-6 md:right-8 flex items-center gap-2 md:gap-3 z-30 pointer-events-auto">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      type="button"
-      aria-label={`Go to slide ${index + 1}`}
-      onClick={() => {
-        if (swiperRef.current) {
-          swiperRef.current.slideToLoop(index);
-        }
-      }}
-      className={`transition-all duration-500 rounded-full h-1 ${
-        currentIndex === index
-          ? 'w-16 md:w-24 bg-white opacity-100'
-          : 'w-8 md:w-10 bg-white/50 opacity-60 hover:opacity-100'
-      }`}
-    />
-  ))}
-</div>
+      <div className="absolute bottom-12 md:bottom-16 right-6 md:right-8 flex items-center gap-2 md:gap-3 z-30 pointer-events-auto">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            aria-label={`Go to slide ${index + 1}`}
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.slideToLoop(index);
+              }
+            }}
+            className={`transition-all duration-500 rounded-full h-1 ${
+              currentIndex === index
+                ? "w-16 md:w-24 bg-white opacity-100"
+                : "w-8 md:w-10 bg-white/50 opacity-60 hover:opacity-100"
+            }`}
+          />
+        ))}
+      </div>
     </section>
   );
 };
