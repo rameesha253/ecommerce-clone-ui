@@ -44,7 +44,7 @@ const HeroSlider: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-12 md:bottom-16 right-6 md:right-8 flex items-center gap-2 md:gap-3 z-30 pointer-events-auto">
+      <div className="absolute bottom-20 md:bottom-24 right-6 md:right-8 flex items-center gap-2 md:gap-3 z-30 pointer-events-auto">
         {slides.map((_, index) => (
           <button
             key={index}
