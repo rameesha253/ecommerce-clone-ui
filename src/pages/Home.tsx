@@ -10,9 +10,8 @@ import Couture from '../components/Couture';
 import Insta from '../components/Insta';
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       <Navbar />
-      <main>
         <Hero />
         <Categories />
         <MostTrending/>
@@ -20,7 +19,6 @@ const Home: React.FC = () => {
         <Couture />
         <Insta />
         <Newsletter />
-      </main>
       <Footer />
     </div>
   );

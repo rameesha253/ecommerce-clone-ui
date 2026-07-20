@@ -1,4 +1,7 @@
-@import "tailwindcss";
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 /* ===========================
@@ -89,38 +92,15 @@ ol {
   }
 
   .btn-primary {
-    @apply bg-black
-    text-white
-    px-8
-    py-3
-    uppercase
-    tracking-widest
-    text-sm
-    transition-all
-    duration-300
-    hover:bg-neutral-800;
+    @apply bg-black text-white px-8 py-3 uppercase tracking-widest text-sm transition-all duration-300 hover:bg-neutral-800;
   }
 
   .btn-outline {
-    @apply border
-    border-black
-    px-8
-    py-3
-    uppercase
-    tracking-widest
-    text-sm
-    transition-all
-    duration-300
-    hover:bg-black
-    hover:text-white;
+    @apply border border-black px-8 py-3 uppercase tracking-widest text-sm transition-all duration-300 hover:bg-black hover:text-white;
   }
 
   .section-title {
-    @apply text-3xl
-    md:text-4xl
-    font-semibold
-    tracking-wide
-    uppercase;
+    @apply text-3xl md:text-4xl font-semibold tracking-wide uppercase;
   }
 }
 
@@ -198,6 +178,14 @@ ol {
   animation: slideInLeft 0.8s ease forwards;
 }
 
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
 /* ===========================
    Scrollbar
 =========================== */
@@ -217,4 +205,14 @@ ol {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
+}
+.swiper-scrollbar {
+  background: #d4d4d4 !important;
+  height: 3px !important;
+  border-radius: 999px;
+}
+
+.swiper-scrollbar-drag {
+  background: #111 !important;
+  border-radius: 999px;
 }
