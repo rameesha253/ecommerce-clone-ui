@@ -45,8 +45,7 @@ const HeroSlider: React.FC = () => {
         ))}
       </Swiper>
 
-      {/* Slider Indicators – bottom right, clickable */}
-      <div className="absolute bottom-12 md:bottom-18 right-10 md:right-8 flex items-center gap-2 md:gap-3 z-10">
+      <div className="absolute bottom-6 left-1/2 z-10 flex items-center gap-2 md:gap-3 rounded-full bg-black/30 px-3 py-2 backdrop-blur-sm shadow-lg ring-1 ring-white/20 transform -translate-x-1/2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -55,10 +54,10 @@ const HeroSlider: React.FC = () => {
                 swiperRef.current.slideToLoop(index);
               }
             }}
-            className={`transition-all duration-500 rounded-full ${
+            className={`transition-all duration-500 rounded-full h-1 ${
               currentIndex === index
-                ? 'w-16 md:w-24 h-[4px] bg-white'
-                : 'w-8 md:w-10 h-[4px] bg-white/50'
+                ? 'w-12 md:w-20 bg-white'
+                : 'w-6 md:w-10 bg-white/60'
             }`}
           />
         ))}
