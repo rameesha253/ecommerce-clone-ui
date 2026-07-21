@@ -19,7 +19,7 @@ const Categories: React.FC = () => {
       {/* Heading */}
       <div className="container-custom pt-16 md:pt-24">
         <div className="mb-12 md:mb-16">
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-black tracking-wide">
+          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left text-black tracking-wide">
             New Arrivals
           </h2>
           <p className="text-gray-600 mt-2 text-base md:text-lg">

@@ -21,7 +21,7 @@ const Newsletter: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
             {/* Left-aligned text */}
             <div className="text-left w-full md:w-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-1">
+              <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left text-black tracking-wide mb-1">
                 Join our newsletter
               </h2>
               <p className="text-gray-600 text-sm md:text-base">

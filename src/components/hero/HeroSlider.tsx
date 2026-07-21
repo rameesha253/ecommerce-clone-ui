@@ -20,7 +20,7 @@ const HeroSlider: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[800px] overflow-hidden">
+    <section className="relative w-full min-h-[320px] sm:min-h-[420px] md:min-h-[500px] lg:min-h-[650px] xl:min-h-[750px] 2xl:min-h-[900px] overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         autoplay={{
@@ -38,13 +38,13 @@ const HeroSlider: React.FC = () => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
-              className="relative w-full h-[100vh] bg-center bg-cover bg-gray-200" // fallback gray
+              className="relative w-full h-full min-h-[320px] sm:min-h-[420px] md:min-h-[500px] lg:min-h-[650px] xl:min-h-[750px] 2xl:min-h-[900px] bg-center bg-cover bg-gray-200"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-20 md:bottom-24 right-6 md:right-8 flex items-center gap-2 md:gap-3 z-30 pointer-events-auto">
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 flex items-center gap-2 sm:gap-2.5 md:gap-3 z-30 pointer-events-auto">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -57,8 +57,8 @@ const HeroSlider: React.FC = () => {
             }}
             className={`transition-all duration-500 rounded-full h-1 ${
               currentIndex === index
-                ? "w-16 md:w-24 bg-white opacity-100"
-                : "w-8 md:w-10 bg-white/50 opacity-60 hover:opacity-100"
+                ? "w-10 sm:w-12 md:w-16 lg:w-20 bg-white opacity-100"
+                : "w-6 sm:w-8 md:w-10 bg-white/50 opacity-60 hover:opacity-100"
             }`}
           />
         ))}

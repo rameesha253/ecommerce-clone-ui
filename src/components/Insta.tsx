@@ -20,7 +20,6 @@ const Insta: React.FC = () => {
   const nextRef = useRef<HTMLButtonElement>(null);
   const swiperRef = useRef<SwiperType | null>(null);
 
-  // Attach navigation refs after mount (required for loop mode)
   useEffect(() => {
     if (swiperRef.current) {
       swiperRef.current.navigation.init();
@@ -29,30 +28,30 @@ const Insta: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-white pl-4 lg:pl-8 py-12 md:py-16 lg:py-20">
-      <div className="max-w-[1850px] mx-auto px-6 lg:px-10">
-        {/* Heading with arrows on the right */}
-        <div className="relative mb-10">
-          <h2 className="text-center text-[40px] font-light tracking-tight">
-            Worn & Loved ❤️
+    <section className="bg-white pl-4 lg:pl-8 py-8 sm:py-12 lg:py-20">
+      <div className="max-w-[1850px] mx-auto px-4 sm:px-6 lg:px-10">
+        {/* Heading with arrows */}
+        <div className="relative mb-6 sm:mb-10">
+          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left text-black tracking-wide">
+            Worn & Loved❤️
           </h2>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 flex gap-6">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden sm:flex gap-3 sm:gap-6">
             <button
               ref={prevRef}
-              className="text-3xl hover:opacity-60 transition"
+              className="text-2xl sm:text-3xl hover:opacity-60 transition"
             >
               <FiArrowLeft />
             </button>
             <button
               ref={nextRef}
-              className="text-3xl hover:opacity-60 transition"
+              className="text-2xl sm:text-3xl hover:opacity-60 transition"
             >
               <FiArrowRight />
             </button>
           </div>
         </div>
 
-        {/* Slider – same behaviour as the Categories reference */}
+        {/* Slider */}
         <div className="w-full overflow-hidden">
           <Swiper
             modules={[Navigation, Mousewheel]}
@@ -62,10 +61,10 @@ const Insta: React.FC = () => {
             }}
             mousewheel={{
               forceToAxis: true,
-              sensitivity: 1,          // one card per scroll tick
+              sensitivity: 1,
             }}
             slidesPerView="auto"
-            spaceBetween={24}
+            spaceBetween={16}
             loop={true}
             grabCursor={true}
             speed={400}
@@ -77,7 +76,6 @@ const Insta: React.FC = () => {
               swiperRef.current = swiper;
             }}
             onBeforeInit={(swiper) => {
-              // Manually link navigation refs for loop compatibility
               if (
                 swiper.params.navigation &&
                 typeof swiper.params.navigation !== "boolean"
@@ -95,10 +93,10 @@ const Insta: React.FC = () => {
                 key={post.id}
                 className="!w-[220px] sm:!w-[280px] lg:!w-[340px]"
               >
-                <div className="group bg-white rounded-[18px] overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-lg">
+                <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-lg">
                   {/* Header */}
-                  <div className="flex items-center gap-3 px-4 py-4">
-                    <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                  <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-3 sm:py-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                       <img
                         src={post.userAvatar}
                         alt={post.username}
@@ -106,17 +104,17 @@ const Insta: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <p className="text-[18px] font-semibold leading-none">
+                      <p className="text-base sm:text-[18px] font-semibold leading-none">
                         {post.username}
                       </p>
-                      <p className="text-[15px] text-gray-400 mt-1">
+                      <p className="text-xs sm:text-[15px] text-gray-400 mt-1">
                         {post.category}
                       </p>
                     </div>
                   </div>
 
-                  {/* Image – no overlay, always clear */}
-                  <div className="relative h-[400px] overflow-hidden">
+                  {/* Image */}
+                  <div className="relative h-[280px] sm:h-[350px] lg:h-[400px] overflow-hidden">
                     <img
                       src={post.image}
                       alt={post.username}
@@ -125,24 +123,27 @@ const Insta: React.FC = () => {
                   </div>
 
                   {/* Footer */}
-                  <div className="flex items-center justify-between px-5 py-4">
-                    <div className="flex items-center gap-5 text-[28px] text-gray-600">
-                      <button className="hover:text-red-500 transition-colors">
-                        <FiHeart />
-                      </button>
-                      <button className="hover:text-blue-500 transition-colors">
-                        <FiMessageCircle />
-                      </button>
-                      <button className="hover:text-purple-500 transition-colors">
-                        <FiUser />
-                      </button>
+                  <div className="flex flex-col gap-3 px-3 sm:px-5 py-3 sm:py-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-3 sm:gap-5 text-[18px] sm:text-[24px] text-gray-600">
+                        <button className="hover:text-red-500 transition-colors">
+                          <FiHeart />
+                        </button>
+                        <button className="hover:text-blue-500 transition-colors">
+                          <FiMessageCircle />
+                        </button>
+                        <button className="hover:text-purple-500 transition-colors">
+                          <FiUser />
+                        </button>
+                      </div>
+                      <a
+                        href={post.shopLink}
+                        className="flex items-center gap-1 sm:gap-2 text-sm sm:text-[18px] font-medium hover:text-gray-600 transition-colors whitespace-nowrap"
+                      >
+                        <span className="leading-none">Shop Now</span>
+                        <FiShoppingBag className="shrink-0" />
+                      </a>
                     </div>
-                    <a
-                      href={post.shopLink}
-                      className="flex items-center gap-2 text-[22px] font-medium hover:text-gray-600 transition-colors"
-                    >
-                      Shop Now <FiShoppingBag />
-                    </a>
                   </div>
                 </div>
               </SwiperSlide>

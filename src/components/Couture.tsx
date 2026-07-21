@@ -41,8 +41,8 @@ const Couture: React.FC = () => {
           <div className="w-full pl-4 md:pl-10 pr-4 md:pr-8">
             {/* HEADER – smaller, elegant */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 md:mb-8 gap-4">
-              <h2 className="text-3xl md:text-4xl font-light uppercase tracking-wide leading-none">
-                COUTURE
+              <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left text-black tracking-wide leading-none">
+                Couture
               </h2>
               <div className="flex items-center gap-4 md:gap-10">
                 <a
